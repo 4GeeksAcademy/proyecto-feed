@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--MODAL-->
+
+
+    <div class="modal" tabindex="-1" id="exampleModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Caption.</p>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Add the caption or your post here</label>
+                        <i class="fa-solid fa-camera p-2"></i>
+                        <i class="fa-solid fa-location-dot p-2"></i>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Barra superior-->
+
+
+    <div class="container">
+        <nav class="navbar p-5">
+            <div class="d-flex gap-2">
+                <i class="fa-brands fa-instagram fs-3 pt-2"></i>
+                <p class="fs-3">Instagram</p>
+            </div>
+            <div class="d-flex m-2">
+                <button type="button" class="btn btn-success m-2" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Create a new post</button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle m-2" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- aqui pegar el navs and tabs-->
+
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true">
+                    <i class="fa-solid fa-table-cells">
+                    </i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                </button>
+            </li>
+
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row p-2 m-1">
+
+                    <div class="col-4 px-0">
+                        <img
+                            src="https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=1200,height=1200,fit=cover/article/main-picture/60522ed795a8f614147205.jpg">
+
+                    </div>
+                    <div class="col-4 px-0">
+                        <img src="https://pbs.twimg.com/media/ElTE8d8XgAIpHmi.jpg">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img
+                            src="https://aica.org/imagenes/noticias/el-origen-de-la-pobreza-en-la-argentina-no-es-solo-del-virus-9vHW.jpg">
+                    </div>
+
+
+                </div>
+                <div class="row p-2 m-1">
+                    <div class="col-4 px-0">
+                        <img
+                            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/muere-maradona-1606326764.jpg?crop=0.845xw:1.00xh;0.0783xw,0&resize=640:*">
+
+                    </div>
+                    <div class="col-4 px-0">
+                        <img src="https://www.mensajeroplus.com/wp-content/uploads/2021/12/CasaDeTucum%C3%A1n.jpg">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img
+                            src="https://media.gettyimages.com/id/79660446/es/foto/sport-boxing-the-felt-forum-new-york-usa-7th-december-1971-heavyweight-championship-fight.jpg?s=612x612&w=gi&k=20&c=Cch2YlwQcjqpLFWZVHfOolBhEtZbbYxl75ne_rl5MJA=">
+                    </div>
+
+
+                </div>
+
+                <div class="row p-2 m-1">
+                    <div class="col-4 px-0">
+                        <img
+                            src="https://fotografias.lasexta.com/clipping/cmsimages02/2022/03/11/DD3ADEF0-EBDC-41D1-BE29-7FD5950B9005/anonymous_103.jpg?crop=4320,3240,x0,y0&width=1200&height=900&optimize=low&format=webply">
+
+                    </div>
+                    <div class="col-4 px-0">
+                        <img
+                            src="https://classic.exame.com/wp-content/uploads/2017/09/programac3a7c3a3o.jpg?quality=70&strip=info&w=1024">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWvCGgPLEzH3p6NxxrXYkpeedoN6fxAsNqog9cXTYv44Yf0xprtKCMJ4pl0UUGdSuL9U7ZcguJaDt4IIbqXs0lEfa-CAoTZ70v3H55jYJq_avDFINcCB0gVJj8cYOdYc_Orqrk0QNF-zN5p-8cymISwXHa3lUBOIbStt0CxsG7wv0EViNVxQ/w1200-h630-p-k-no-nu/Iron%20Mike.jpg">
+                    </div>
+
+
+                </div>
+
+            </div>
+ <!---------------------------------------------------------------------------------------------------------------->
+            <div class="tab-pane fade container col-4" id="profile" aria-labelledby="profile-tab">
+
+                <div class="card" style="width: 25rem;">
+
+                    <div class="d-flex bd-highlight mb-3">
+
+                        <div class="me-auto p-2 fw-bolder">My doggy</div>
+
+                        <div class="p-2 bd-highlight">27/11</div>
+                    </div>
+                    <img
+                        src="https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=1200,height=1200,fit=cover/article/main-picture/60522ed795a8f614147205.jpg">
+
+                    <div class="card-body">
+                        <h6 class="fw-bold">857 Likes</h6>
+                        <p class="card-text">mi perro dinamita </p>
+                    </div>
+
+
+                </div>
+
+
+                <div class="card" style="width: 25rem;">
+                    <div class="d-flex bd-highlight mb-3">
+                        <div class="me-auto p-2 fw-bolder">Que personajes !</div>
+
+                        <div class="p-2 bd-highlight">27/11</div>
+                    </div>
+                    <img src="https://pbs.twimg.com/media/ElTE8d8XgAIpHmi.jpg">
+
+                    <div class="card-body">
+                        <h6 class="fw-bold">5787 Likes</h6>
+                        <p class="card-text">La mona Jimenez, el Pity Alvarez y Carlitos Tevez juntos en el escenario, mas duros que una porcelana </p>
+                    </div>
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="d-flex bd-highlight mb-3">
+                            <div class="me-auto p-2 fw-bolder">El barrio</div>
+
+                            <div class="p-2 bd-highlight">27/11</div>
+                        </div>
+                        <img
+                        src="https://aica.org/imagenes/noticias/el-origen-de-la-pobreza-en-la-argentina-no-es-solo-del-virus-9vHW.jpg">
+
+                        <div class="card-body">
+                            <h6 class="fw-bold">214 Likes</h6>
+                            <p class="card-text">Los barrios bajos de Argentina, mejor conocidos como "villas" </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="d-flex bd-highlight mb-3">
+                            <div class="me-auto p-2 fw-bolder">D10S</div>
+
+                            <div class="p-2 bd-highlight">07/86</div>
+                        </div>
+                        <img
+                            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/muere-maradona-1606326764.jpg?crop=0.845xw:1.00xh;0.0783xw,0&resize=640:*">
+
+                        <div class="card-body">
+                            <h6 class="fw-bold">18122022 Likes</h6>
+                            <p class="card-text"> El primer D10S del futbol Argentino </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="d-flex bd-highlight mb-3">
+                            <div class="me-auto p-2 fw-bolder">Casa Historica de Tucuman</div>
+
+                            <div class="p-2 bd-highlight">09/07</div>
+                        </div>
+                        <img src="https://www.mensajeroplus.com/wp-content/uploads/2021/12/CasaDeTucum%C3%A1n.jpg">
+
+                        <div class="card-body">
+                            <h6 class="fw-bold">33587 Likes</h6>
+                            <p class="card-text">EL 9 de Julio de 1816 se firma la declaración de la independencia en la Casa Historica de Tucuman </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="d-flex bd-highlight mb-3">
+                            <div class="me-auto p-2 fw-bolder">Ringo vs Clay</div>
+
+                            <div class="p-2 bd-highlight">27/11</div>
+                        </div>
+                        <img
+                            src="https://media.gettyimages.com/id/79660446/es/foto/sport-boxing-the-felt-forum-new-york-usa-7th-december-1971-heavyweight-championship-fight.jpg?s=612x612&w=gi&k=20&c=Cch2YlwQcjqpLFWZVHfOolBhEtZbbYxl75ne_rl5MJA=">
+
+                        <div class="card-body">
+                            <h6 class="fw-bold">1865 Likes</h6>
+                            <p class="card-text">La pelea historica del boxeador Argentino Ringo Bonavena contra el mítico Mohammed Alí </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="d-flex bd-highlight mb-3">
+                            <div class="me-auto p-2 fw-bolder">Anonymus</div>
+
+                            <div class="p-2 bd-highlight">??/??</div>
+                        </div>
+                        <img
+                        src="https://fotografias.lasexta.com/clipping/cmsimages02/2022/03/11/DD3ADEF0-EBDC-41D1-BE29-7FD5950B9005/anonymous_103.jpg?crop=4320,3240,x0,y0&width=1200&height=900&optimize=low&format=webply">
+
+                        <div class="card-body">
+                            <h6 class="fw-bold">xxxx Likes</h6>
+                            <p class="card-text">Información oculta </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="d-flex bd-highlight mb-3">
+                            <div class="me-auto p-2 fw-bolder">Coding</div>
+
+                            <div class="p-2 bd-highlight">01/10</div>
+                        </div>
+                        <img
+                            src="https://classic.exame.com/wp-content/uploads/2017/09/programac3a7c3a3o.jpg?quality=70&strip=info&w=1024">
+
+                        <div class="card-body">
+                            <h6 class="fw-bold">110010111001 Likes</h6>
+                            <p class="card-text">Lineas de código </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="d-flex bd-highlight mb-3">
+                            <div class="me-auto p-2 fw-bolder">Otra leyenda del boxeo</div>
+
+                            <div class="p-2 bd-highlight">27/11</div>
+                        </div>
+                        <img
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWvCGgPLEzH3p6NxxrXYkpeedoN6fxAsNqog9cXTYv44Yf0xprtKCMJ4pl0UUGdSuL9U7ZcguJaDt4IIbqXs0lEfa-CAoTZ70v3H55jYJq_avDFINcCB0gVJj8cYOdYc_Orqrk0QNF-zN5p-8cymISwXHa3lUBOIbStt0CxsG7wv0EViNVxQ/w1200-h630-p-k-no-nu/Iron%20Mike.jpg">
+
+                        <div class="card-body">
+                            <h6 class="fw-bold">5867 Likes</h6>
+                            <p class="card-text">Myke Tyson, el mejor peso completo de la historia </p>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+            
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
